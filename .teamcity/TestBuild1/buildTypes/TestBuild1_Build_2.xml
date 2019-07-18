@@ -6,9 +6,7 @@
     <options>
       <option name="artifactRules" value=".teamcity =&gt; log.txt" />
     </options>
-    <parameters>
-      <param name="system.MainAssemblyInfoFilePath" value="2" />
-    </parameters>
+    <parameters />
     <build-runners>
       <runner id="RUNNER_2" name="build info" type="simpleRunner">
         <parameters>
