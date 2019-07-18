@@ -8,6 +8,7 @@
     </disabled-settings>
     <parameters>
       <param name="build.vcs.number.TestBuild1_HttpsGithubComGriffkriogenRepoTestGitRefsHeadsMaster" value="%build.number%=&gt;build.number" />
+      <param name="system.os" value="%teamcity.agent.jvm.os.name% = linux" />
     </parameters>
     <build-runners>
       <runner id="RUNNER_5" name="1" type="simpleRunner">
