@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="TestBuild1" uuid="b2a7e0d4-9af5-4c9a-a8cd-e658f63d5709" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Repotester</name>
+  <parameters />
+  <cleanup />
+</project>
+
