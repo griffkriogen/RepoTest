@@ -5,7 +5,7 @@
   <settings>
     <options>
       <option name="artifactRules" value=".teamcity =&gt; log.txt" />
-      <option name="buildNumberPattern" value="%build.vcs.number.TestBuild1_HttpsGithubComGriffkriogenRepoTestGitRefsHeadsMaster%%build.counter%.1" />
+      <option name="buildNumberPattern" value="%system.build.vcs.number.TestBuild1_HttpsGithubComGriffkriogenRepoTestGitRefsHeadsMaster%" />
     </options>
     <parameters />
     <build-runners>
