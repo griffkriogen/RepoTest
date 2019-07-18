@@ -16,6 +16,79 @@ echo %build.vcs.number% > build.revision]]></param>
           <param name="use.custom.script" value="true" />
         </parameters>
       </runner>
+      <runner id="RUNNER_7" name="set build name" type="jetbrains_powershell">
+        <parameters>
+          <param name="jetbrains_powershell_execution" value="PS1" />
+          <param name="jetbrains_powershell_noprofile" value="true" />
+          <param name="jetbrains_powershell_script_code"><![CDATA[function TruncateString([string] $s, [int] $maxLength)
+02
+{
+03
+    return $s.substring(0, [System.Math]::Min($maxLength, $s.Length))
+04
+}
+05
+ 
+06
+# Fetch AssemblyFileVersion from AssemblyInfo.cs for use as the base for the build number. Example of what
+07
+# we can expect: "1.1.82.88-releases/v1.1"
+08
+# We need to filter out some invalid characters and possibly truncate the result and then we're good to go. 
+09
+$info = (Get-Content %MainAssemblyInfoFilePath%)
+10
+ 
+11
+Write-Host $info
+12
+ 
+13
+$matches = ([regex]'AssemblyFileVersion\(\"([^\"]+)\"\)').Matches($info)
+14
+$newBuildNumber = $matches[0].Groups[1].Value
+15
+ 
+16
+# Split in two parts:  "1.1.82.88" and "releases/v1.1"
+17
+$newBuildNumber -match '^([^-]*)-(.*)$'
+18
+$baseNumber = $Matches[1]
+19
+$branch = $Matches[2]
+20
+ 
+21
+# Remove "parent" folders from branch name.
+22
+# Example "1.0.119-bug/XENA-5834" =&amp;amp;amp;gt; "1.0.119-XENA-5834"
+23
+$branch = ($branch -replace '^([^/]+/)*(.+)$','$2' )
+24
+ 
+25
+# Filter out illegal characters, replace with '-'
+26
+$branch = ($branch -replace '[/\\ _\.]','-')
+27
+ 
+28
+$newBuildNumber = "$baseNumber-$branch"
+29
+ 
+30
+# Limit build number to 20 characters to make it work with Octopack
+31
+$newBuildNumber = (TruncateString $newBuildNumber 20)
+32
+ 
+33
+Write-Host "##teamcity[buildNumber '$newBuildNumber']"]]></param>
+          <param name="jetbrains_powershell_script_mode" value="CODE" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
     </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="TestBuild1_HttpsGithubComGriffkriogenRepoTestGitRefsHeadsMaster" />
