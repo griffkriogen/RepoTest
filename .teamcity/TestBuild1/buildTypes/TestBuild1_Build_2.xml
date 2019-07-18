@@ -5,7 +5,7 @@
   <settings>
     <options>
       <option name="artifactRules" value=".teamcity =&gt; log.txt" />
-      <option name="buildNumberPattern" value="%env.BUILD_NUMBER%" />
+      <option name="buildNumberPattern" value="%system.build.number%" />
     </options>
     <parameters />
     <build-runners>
