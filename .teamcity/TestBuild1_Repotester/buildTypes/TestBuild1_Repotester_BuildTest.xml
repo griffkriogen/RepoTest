@@ -6,9 +6,7 @@
     <disabled-settings>
       <setting-ref ref="RUNNER_6" />
     </disabled-settings>
-    <parameters>
-      <param name="os" value="%teamcity.agent.jvm.os.name%= linux" />
-    </parameters>
+    <parameters />
     <build-runners>
       <runner id="RUNNER_5" name="1" type="simpleRunner">
         <parameters>
