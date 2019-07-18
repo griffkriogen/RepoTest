@@ -3,6 +3,10 @@
   <name>Build (1)</name>
   <description />
   <settings>
+    <options>
+      <option name="artifactRules" value=".teamcity =&gt; log.txt" />
+      <option name="buildNumberPattern" value="%build.counter%=+1" />
+    </options>
     <parameters />
     <build-runners>
       <runner id="RUNNER_2" name="build info" type="simpleRunner">
