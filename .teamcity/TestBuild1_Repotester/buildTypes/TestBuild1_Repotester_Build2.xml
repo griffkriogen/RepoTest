@@ -3,6 +3,9 @@
   <name>Build2</name>
   <description />
   <settings>
+    <disabled-settings>
+      <setting-ref ref="RUNNER_6" />
+    </disabled-settings>
     <parameters>
       <param name="build.vcs.number.TestBuild1_HttpsGithubComGriffkriogenRepoTestGitRefsHeadsMaster" value="%build.number%" />
     </parameters>
