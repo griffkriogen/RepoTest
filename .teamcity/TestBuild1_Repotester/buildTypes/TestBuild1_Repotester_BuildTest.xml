@@ -7,7 +7,7 @@
       <setting-ref ref="RUNNER_6" />
     </disabled-settings>
     <parameters>
-      <param name="system.os" value="%teamcity.agent.jvm.os.name%= Linux" />
+      <param name="system.os" value="%teamcity.agent.jvm.os.name%= linux" />
     </parameters>
     <build-runners>
       <runner id="RUNNER_5" name="1" type="simpleRunner">
