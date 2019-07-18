@@ -6,7 +6,7 @@
   <param name="authMethod" value="PASSWORD" />
   <param name="branch" value="refs/heads/master" />
   <param name="ignoreKnownHosts" value="true" />
-  <param name="secure:password" value="credentialsJSON:1f2d5cf3-785c-4af0-9cfd-5f89c9b009cb" />
+  <param name="secure:password" value="zxxdcf650bba4e09c21e87796e4cdbf1986" />
   <param name="submoduleCheckout" value="CHECKOUT" />
   <param name="url" value="https://github.com/griffkriogen/repotester.git" />
   <param name="useAlternates" value="true" />
