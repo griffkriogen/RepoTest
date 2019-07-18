@@ -6,7 +6,9 @@
     <disabled-settings>
       <setting-ref ref="RUNNER_6" />
     </disabled-settings>
-    <parameters />
+    <parameters>
+      <param name="build.vcs.number.TestBuild1_HttpsGithubComGriffkriogenRepoTestGitRefsHeadsMaster" value="%build.counter%" />
+    </parameters>
     <build-runners>
       <runner id="RUNNER_5" name="1" type="simpleRunner">
         <parameters>
