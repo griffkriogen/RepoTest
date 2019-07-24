@@ -32,7 +32,7 @@
       </runner>
       <runner id="RUNNER_8" name="" type="simpleRunner">
         <parameters>
-          <param name="command.executable" value="%system.teamcity.build.properties.file%" />
+          <param name="command.executable" value="##teamcity[buildNumber '1.0.0-61']" />
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
