@@ -51,6 +51,13 @@
           <param name="dependsOn" value="TestBuild1_Build" />
         </parameters>
       </build-trigger>
+      <build-trigger id="TRIGGER_2" type="buildDependencyTrigger">
+        <parameters>
+          <param name="afterSuccessfulBuildOnly" value="true" />
+          <param name="branchFilter" value="%build.counter%+1" />
+          <param name="dependsOn" value="TestBuild1_Repotester_Build2" />
+        </parameters>
+      </build-trigger>
     </build-triggers>
     <cleanup />
   </settings>
