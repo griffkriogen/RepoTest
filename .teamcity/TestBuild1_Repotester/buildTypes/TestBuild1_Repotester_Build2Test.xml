@@ -30,6 +30,12 @@
           <param name="teamcity.tool.jacoco" value="%teamcity.tool.jacoco.DEFAULT%" />
         </parameters>
       </runner>
+      <runner id="RUNNER_8" name="" type="simpleRunner">
+        <parameters>
+          <param name="command.executable" value="%system.teamcity.build.properties.file%= next.build= +1" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
     </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="TestBuild1_Repotester_HttpsGithubComGriffkriogenRepotesterGitRefsHeadsMaster" />
