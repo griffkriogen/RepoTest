@@ -4,7 +4,6 @@
   <description />
   <settings>
     <options>
-      <option name="allowPersonalBuildTriggering" value="false" />
       <option name="buildConfigurationType" value="DEPLOYMENT" />
       <option name="maximumNumberOfBuilds" value="1" />
     </options>
