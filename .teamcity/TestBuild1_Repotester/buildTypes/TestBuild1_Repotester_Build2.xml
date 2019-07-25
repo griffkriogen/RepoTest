@@ -3,6 +3,9 @@
   <name>Build2</name>
   <description />
   <settings>
+    <options>
+      <option name="buildNumberPattern" value="%env.BUILD_NUMBER%" />
+    </options>
     <disabled-settings>
       <setting-ref ref="RUNNER_6" />
     </disabled-settings>
